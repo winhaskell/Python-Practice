@@ -38,7 +38,7 @@ print(dataset.head(20))
 # descriptions
 print(dataset.describe())
 
- sepal-length  sepal-width  petal-length  petal-width
+       sepal-length  sepal-width  petal-length  petal-width
 count    150.000000   150.000000    150.000000   150.000000
 mean       5.843333     3.054000      3.758667     1.198667
 std        0.828066     0.433594      1.764420     0.763161
@@ -94,17 +94,78 @@ SVM: 0.983333 (0.033333)
 
 
 
+# Make predictions on validation dataset
+model = SVC(gamma='auto')
+model.fit(X_train, Y_train)
+predictions = model.predict(X_validation)
+
+
+# Evaluate predictions
+print(accuracy_score(Y_validation, predictions))
+print(confusion_matrix(Y_validation, predictions))
+print(classification_report(Y_validation, predictions))
+
+0.966666666667
+[[11  0  0]
+ [ 0 12  1]
+ [ 0  0  6]]
+                 precision    recall  f1-score   support
+
+    Iris-setosa       1.00      1.00      1.00        11
+Iris-versicolor       1.00      0.92      0.96        13
+ Iris-virginica       0.86      1.00      0.92         6
+
+    avg / total       0.97      0.97      0.97        30
 
 
 
+We must choose an algorithm to use to make predictions.
+
+The results in the previous section suggest that the SVM was perhaps the most accurate model. 
+We will use this model as our final model.
+
+Now we want to get an idea of the accuracy of the model on our validation set.
+
+# Make predictions on validation dataset
+model = SVC(gamma='auto')
+model.fit(X_train, Y_train)
+predictions = model.predict(X_validation)
+
+This will give us an independent final check on the accuracy of the best model. 
+It is valuable to keep a validation set just in case you made a slip during training, 
+such as overfitting to the training set or a data leak. Both of these issues will result in an overly optimistic result.
 
 
+We can evaluate the predictions by comparing them to the expected results in the validation set, 
+then calculate classification accuracy, as well as a confusion matrix and a classification report.
 
+# Evaluate predictions
+print(accuracy_score(Y_validation, predictions))
+print(confusion_matrix(Y_validation, predictions))
+print(classification_report(Y_validation, predictions))
 
+0.966666666667
+[[11  0  0]
+ [ 0 12  1]
+ [ 0  0  6]]
+ 
+We can see that the accuracy is 0.9666 or about 96.6% on the hold out dataset.
 
+The confusion matrix provides an indication of the three errors made.
 
+Finally, the classification report provides a breakdown of each class by precision, 
+recall, f1-score and support showing excellent results (granted the validation dataset was small).
+ 
+ 
+ 
+ 
+                 precision    recall  f1-score   support
 
+    Iris-setosa       1.00      1.00      1.00        11
+Iris-versicolor       1.00      0.92      0.96        13
+ Iris-virginica       0.86      1.00      0.92         6
 
+    avg / total       0.97      0.97      0.97        30
 
 
 
