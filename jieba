@@ -6,3 +6,18 @@ https://pypi.org/project/jieba/
 
 “Jieba” (Chinese for “to stutter”) Chinese text segmentation: built to be the best Python Chinese word segmentation module.
 
+
+Ref:https://www.php.cn/python-tutorials-419307.html
+python安装jieba库的步骤：
+
+1.下载jieba库----第三方中文分词函数库
+2.将安装包解压，记住解压路径
+3.使用cmd令提示符安装
+首先cd到我们刚刚解压文件的路径，定位到jieba的setup.py文件的上级文件中，然后输入以下命令：
+python setup.py install
+4.用一个例子来测试一下
+
+
+
+
+
