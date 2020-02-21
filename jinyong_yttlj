@@ -1,3 +1,10 @@
+参考: 
+https://www.cnblogs.com/becks/p/11421214.html
+https://gitee.com/huangshenru/codes/clneriovm0sqxw5k89j2h98
+https://www.cnblogs.com/0330lgs/p/10648168.html
+
+/////////////////////////////////////////////////////////////////////
+
 // 利用jieba库，统计金庸名著《倚天屠龙记》中人物出现的次数并降序排列
 
 张无忌             5833
