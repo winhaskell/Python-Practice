@@ -17,7 +17,51 @@ python安装jieba库的步骤：
 python setup.py install
 4.用一个例子来测试一下
 
-
-
-
+python setup.py install
+running install
+running build
+running build_py
+creating build
+creating build\lib
+creating build\lib\jieba
+copying jieba\_compat.py -> build\lib\jieba
+copying jieba\__init__.py -> build\lib\jieba
+copying jieba\__main__.py -> build\lib\jieba
+copying jieba\dict.txt -> build\lib\jieba
+creating build\lib\jieba\finalseg
+copying jieba\finalseg\prob_emit.p -> build\lib\jieba\finalseg
+copying jieba\finalseg\prob_emit.py -> build\lib\jieba\finalseg
+copying jieba\finalseg\prob_start.p -> build\lib\jieba\finalseg
+copying jieba\finalseg\prob_start.py -> build\lib\jieba\finalseg
+copying jieba\finalseg\prob_trans.p -> build\lib\jieba\finalseg
+copying jieba\finalseg\prob_trans.py -> build\lib\jieba\finalseg
+copying jieba\finalseg\__init__.py -> build\lib\jieba\finalseg
+creating build\lib\jieba\analyse
+copying jieba\analyse\analyzer.py -> build\lib\jieba\analyse
+copying jieba\analyse\idf.txt -> build\lib\jieba\analyse
+copying jieba\analyse\textrank.py -> build\lib\jieba\analyse
+copying jieba\analyse\tfidf.py -> build\lib\jieba\analyse
+copying jieba\analyse\__init__.py -> build\lib\jieba\analyse
+creating build\lib\jieba\posseg
+copying jieba\posseg\char_state_tab.p -> build\lib\jieba\posseg
+copying jieba\posseg\char_state_tab.py -> build\lib\jieba\posseg
+copying jieba\posseg\prob_emit.p -> build\lib\jieba\posseg
+copying jieba\posseg\prob_emit.py -> build\lib\jieba\posseg
+copying jieba\posseg\prob_start.p -> build\lib\jieba\posseg
+copying jieba\posseg\prob_start.py -> build\lib\jieba\posseg
+copying jieba\posseg\prob_trans.p -> build\lib\jieba\posseg
+copying jieba\posseg\prob_trans.py -> build\lib\jieba\posseg
+copying jieba\posseg\viterbi.py -> build\lib\jieba\posseg
+copying jieba\posseg\__init__.py -> build\lib\jieba\posseg
+creating build\lib\jieba\lac_small
+copying jieba\lac_small\creator.py -> build\lib\jieba\lac_small
+copying jieba\lac_small\nets.py -> build\lib\jieba\lac_small
+copying jieba\lac_small\predict.py -> build\lib\jieba\lac_small
+copying jieba\lac_small\reader_small.py -> build\lib\jieba\lac_small
+copying jieba\lac_small\utils.py -> build\lib\jieba\lac_small
+copying jieba\lac_small\__init__.py -> build\lib\jieba\lac_small
+copying jieba\lac_small\tag.dic -> build\lib\jieba\lac_small
+copying jieba\lac_small\word.dic -> build\lib\jieba\lac_small
+creating build\lib\jieba\lac_small\model_baseline
+...
 
