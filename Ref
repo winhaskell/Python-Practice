@@ -13,3 +13,24 @@ https://github.com/rasbt/python-machine-learning-book
 https://www.motocms.com/blog/en/machine-learning-algorithms-in-python/
 
 
+解决Python词云库wordcloud不显示中文的问题
+https://blog.csdn.net/xiemanr/article/details/72796739
+————————————————
+版权声明：本文为CSDN博主「xiemanR」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/xiemanr/article/details/72796739
+
+
+wordcloud默认是不支持显示中文的，中文会被显示成方框。
+不支持显示中文的原因是因为wordcloud的默认字体不支持中文，那就好办了，
+我们设置一种支持中文的字体即可， wordlcloud.WordCloud类初始化函数有个设置字体的参数font_path，
+把支持中文的字体的路径传给font_path。
+
+# the font from github: https://github.com/adobe-fonts
+font = r'C:\Windows\Fonts\simfang.ttf'
+wwww = WordCloud(collocations=False, font_path=font, width=1400, height=1400, margin=2).generate(text.lower())
+plt.imshow(wwww)
+plt.axis("off")
+plt.show()
+wc.to_file('show_Chinese.png')  # 把词云保存下来 
+
+
