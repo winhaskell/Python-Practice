@@ -51,10 +51,6 @@ for word in words:     #筛选分析后的名词
         continue
     elif word=="教主":  #书中教主也指张无忌，即循环读取到教主也认为是张无忌这个名字出现一次，后面类似
         rword="张无忌"
-    elif word=="无忌":
-        rword="张无忌"
-    elif word=="义父":
-        rword="谢逊"
     else:
         rword=word
     counts[rword]=counts.get(rword,0)+1  
@@ -72,6 +68,13 @@ for i in range(80):#显示前80位数据
     word,count=items[i]
     print("{0:<10}{1:>10}".format(word,count)) 
 #0:<10左对齐，宽度10，”>10"右对齐
+
+
+
+
+
+
+
 
 
 
